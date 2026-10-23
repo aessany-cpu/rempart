@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REMP'ART — Studio de création digitale · Jean Levi Aka</title>
+  <meta name="description" content="REMP'ART, le studio de création digitale fondé par Jean Levi Aka : affiches publicitaires, identité visuelle, visuels pour réseaux sociaux, vidéo et communication de marque.">
+  <meta name="theme-color" content="#07080d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="REMP'ART — Votre vision. Notre création.">
+  <meta property="og:description" content="Studio de création digitale fondé par Jean Levi Aka. Affiches, identité visuelle, réseaux sociaux, vidéo.">
+  <meta property="og:image" content="assets/img/portfolio/parfum-arta.webp">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="importmap">{ "imports": { "three": "./assets/vendor/three/three.module.min.js" } }</script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <!-- Préchargement -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__nib" viewBox="0 0 120 80"><path d="M10 40 C 40 0, 80 0, 110 40" /><path d="M10 40 C 40 80, 80 80, 110 40" /><rect x="4" y="34" width="12" height="12" /><rect x="104" y="34" width="12" height="12" /></svg>
+      <div class="loader__count"><span data-count>0</span>%</div>
+      <p class="loader__label">Ouverture de l'atelier</p>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">Voir</span></div>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__brand" href="#hero" aria-label="REMP'ART — retour en haut">
+        <img src="assets/img/rempart-logo-white.png" alt="REMP'ART" width="150" height="52">
+      </a>
+      <nav class="nav__links" id="menu" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#approche">Approche</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#fondateur">Le fondateur</a>
+        <a href="#commande" class="btn btn--red btn--sm" data-magnetic>Commander ↗</a>
+      </nav>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ============ HERO : l'atelier → l'écran → le monde de la création ============ -->
+    <section class="hero" id="hero" aria-label="Accueil">
+      <div class="hero__stage">
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__fallback" aria-hidden="true">
+          <img src="assets/img/portfolio/parfum-arta-sm.webp" alt="">
+          <img src="assets/img/portfolio/mercedes-amg-sm.webp" alt="">
+          <img src="assets/img/portfolio/yaki-sm.webp" alt="">
+          <img src="assets/img/portfolio/betsaleel-sm.webp" alt="">
+        </div>
+        <div class="hero__vignette"></div>
+        <div class="hero__flash"></div>
+
+        <div class="hero__intro wrap">
+          <p class="eyebrow"><span class="dot"></span> REMP'ART — Studio de création digitale</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Entrez dans</span></span>
+            <span class="line"><span>l'<em>atelier</em>.</span></span>
+          </h1>
+          <p class="hero__lead">Derrière chaque affiche, il y a un écran, une idée et un créateur. Faites défiler pour plonger dans l'écran de Jean Levi Aka.</p>
+        </div>
+
+        <p class="hero__caption hero__caption--a wrap"><span>01</span> Une idée. Un écran. Un créateur.</p>
+        <p class="hero__caption hero__caption--b wrap"><span>02</span> On entre dans l'écran…</p>
+
+        <ul class="hero__words" aria-hidden="true">
+          <li>Logo</li><li>Affiche</li><li>Identité visuelle</li><li>Réseaux sociaux</li><li>Vidéo</li>
+        </ul>
+
+        <div class="hero__final wrap">
+          <p class="eyebrow"><span class="dot"></span> Créativité · Identité · Impact</p>
+          <h2 class="hero__title hero__title--final">
+            <span class="line"><span>Votre vision.</span></span>
+            <span class="line"><span><em>Notre création.</em></span></span>
+          </h2>
+          <p class="hero__lead">REMP'ART transforme vos idées en créations visuelles fortes, cohérentes et mémorables pour faire rayonner votre marque.</p>
+          <div class="actions">
+            <a href="#commande" class="btn btn--red" data-magnetic>Présenter mon projet ↗</a>
+            <a href="#realisations" class="btn btn--ghost" data-magnetic>Voir les réalisations</a>
+          </div>
+        </div>
+
+        <div class="hero__hud wrap" aria-hidden="true">
+          <div class="hero__chapters">
+            <span class="is-active">L'atelier</span><span>L'écran</span><span>Le monde de la création</span>
+          </div>
+          <div class="hero__scroll"><span class="hero__scroll-line"></span> Faites défiler</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Logo</span><i>✦</i><span>Affiche</span><i>✦</i><span>Flyer</span><i>✦</i><span>Identité visuelle</span><i>✦</i><span>Réseaux sociaux</span><i>✦</i><span>Montage vidéo</span><i>✦</i><span>Communication de marque</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow eyebrow--red">Ce que nous faisons</p>
+          <h2 class="h2" data-split>Des idées transformées en images qui marquent.</h2>
+          <p class="section__lead" data-reveal>Des solutions créatives pour les marques, les entrepreneurs, les associations et les projets qui veulent communiquer avec impact.</p>
+        </div>
+        <ol class="services__list">
+          <li class="service" data-preview="assets/img/portfolio/parfum-arta-sm.webp" data-service="Design graphique">
+            <span class="service__num">01</span>
+            <h3 class="service__title">Design graphique</h3>
+            <p class="service__text">Affiches, flyers, brochures, invitations, supports publicitaires et visuels promotionnels.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/portfolio/betsaleel-sm.webp" data-service="Identité visuelle / logo">
+            <span class="service__num">02</span>
+            <h3 class="service__title">Identité visuelle</h3>
+            <p class="service__text">Création de logo, palette de couleurs, typographies et charte graphique pour une marque cohérente.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/portfolio/yaki-sm.webp" data-service="Visuels pour réseaux sociaux">
+            <span class="service__num">03</span>
+            <h3 class="service__title">Réseaux sociaux</h3>
+            <p class="service__text">Visuels de publication, couvertures, campagnes et déclinaisons adaptées à vos plateformes.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/portfolio/mercedes-amg-sm.webp" data-service="Vidéo et montage">
+            <span class="service__num">04</span>
+            <h3 class="service__title">Vidéo &amp; montage</h3>
+            <p class="service__text">Montage vidéo, contenus promotionnels et formats courts pour présenter vos idées.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/portfolio/travaux-publics-sm.webp" data-service="Communication de marque">
+            <span class="service__num">05</span>
+            <h3 class="service__title">Communication de marque</h3>
+            <p class="service__text">Conception de supports qui renforcent votre image et rendent votre message plus clair.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+          <li class="service" data-preview="assets/img/portfolio/alloco-spice-sm.webp" data-service="Demande sur mesure">
+            <span class="service__num">06</span>
+            <h3 class="service__title">Demandes sur mesure</h3>
+            <p class="service__text">Un besoin particulier ? Décrivez votre projet et nous étudierons une solution adaptée.</p>
+            <span class="service__arrow" aria-hidden="true">↗</span>
+          </li>
+        </ol>
+      </div>
+      <div class="services__preview" aria-hidden="true"><img alt=""></div>
+    </section>
+
+    <!-- ============ APPROCHE ============ -->
+    <section class="section approach" id="approche">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow eyebrow--red">Notre approche</p>
+          <h2 class="h2" data-split>La créativité doit avoir un objectif.</h2>
+          <p class="section__lead" data-reveal>Nous associons esthétique, clarté et cohérence pour que chaque création serve réellement votre communication.</p>
+        </div>
+        <div class="approach__track">
+          <svg class="approach__path" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+            <path class="approach__curve" d="M20 200 C 220 20, 380 20, 600 130 S 980 250, 1180 60" />
+            <g class="approach__anchors">
+              <rect x="12" y="192" width="16" height="16" />
+              <rect x="592" y="122" width="16" height="16" />
+              <rect x="1172" y="52" width="16" height="16" />
+            </g>
+          </svg>
+          <ol class="approach__steps">
+            <li class="step">
+              <span class="step__num">Étape 01</span>
+              <h3>Comprendre</h3>
+              <p>Votre besoin, votre public, vos objectifs et votre identité.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">Étape 02</span>
+              <h3>Concevoir</h3>
+              <p>Une proposition créative adaptée au message et au support.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">Étape 03</span>
+              <h3>Finaliser</h3>
+              <p>Une livraison préparée selon les formats convenus avec vous.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RÉALISATIONS ============ -->
+    <section class="work" id="realisations">
+      <div class="work__pin">
+        <div class="work__row">
+        <div class="work__intro">
+          <p class="eyebrow eyebrow--red">Réalisations</p>
+          <h2 class="h2" data-split>La créativité en pratique.</h2>
+          <p class="section__lead">Neuf affiches, neuf messages. Cliquez sur une création pour la découvrir en grand.</p>
+          <p class="work__hint" aria-hidden="true"><span></span> Faites défiler</p>
+        </div>
+        <div class="work__track" data-work-track>
+          <article class="card" style="--ar: 0.681" data-index="0" data-title="Parfum ARTA" data-cat="Publicité produit · Luxe" data-service="Design graphique" data-img="assets/img/portfolio/parfum-arta.webp"
+            data-brief="Faire désirer un parfum haut de gamme et assumer son prix." data-answer="Le flacon rouge rubis est traité comme un bijou : reflets, bouchon taillé, roses en profondeur de champ. Le bandeau contact et prix ferme la lecture sans voler la vedette au produit.">
+            <button class="card__btn" aria-label="Agrandir : Parfum ARTA">
+              <span class="card__media"><img src="assets/img/portfolio/parfum-arta-sm.webp" alt="Affiche du parfum ARTA : flacon rouge entouré de roses" loading="lazy" width="545" height="800"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">01</span><h3>Parfum ARTA</h3><p>Publicité produit · Luxe</p></div>
+          </article>
+          <article class="card" style="--ar: 0.85" data-index="1" data-title="Mercedes-AMG GT" data-cat="Automobile · Concept" data-service="Design graphique" data-img="assets/img/portfolio/mercedes-amg.webp"
+            data-brief="Raconter la puissance d'une sportive autrement qu'avec une fiche technique." data-answer="Un félin et la voiture partagent le même regard : la « bête de course » devient littérale. Palette bleu glacé, étoile monumentale en arrière-plan, accroche courte.">
+            <button class="card__btn" aria-label="Agrandir : Mercedes-AMG GT">
+              <span class="card__media"><img src="assets/img/portfolio/mercedes-amg-sm.webp" alt="Affiche Mercedes-AMG GT avec un léopard aux yeux bleus" loading="lazy" width="600" height="706"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">02</span><h3>Mercedes-AMG GT</h3><p>Automobile · Concept</p></div>
+          </article>
+          <article class="card" style="--ar: 0.85" data-index="2" data-title="Yaki — Brosse-toi avant de l'ouvrir" data-cat="Concept créatif · Typographie" data-service="Visuels pour réseaux sociaux" data-img="assets/img/portfolio/yaki.webp"
+            data-brief="Transformer un proverbe en visuel qu'on a envie de partager." data-answer="Une typographie architecturale « YAKI » posée sur une langue brossée : humour, couleurs primaires et lecture immédiate. Le proverbe donne la morale, l'image fait sourire.">
+            <button class="card__btn" aria-label="Agrandir : Yaki">
+              <span class="card__media"><img src="assets/img/portfolio/yaki-sm.webp" alt="Affiche Yaki : langue brossée par trois brosses à dents colorées" loading="lazy" width="600" height="706"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">03</span><h3>Yaki</h3><p>Concept créatif · Typographie</p></div>
+          </article>
+          <article class="card" style="--ar: 0.85" data-index="3" data-title="1er décembre — Lutte contre le VIH-SIDA" data-cat="Sensibilisation · Santé" data-service="Communication de marque" data-img="assets/img/portfolio/vih-sida.webp"
+            data-brief="Parler de prévention sans faire peur ni ennuyer." data-answer="Un clin d'œil qui accroche (« 5 fruits et légumes par jour ne protègent pas ») puis six gestes de prévention clairs, hiérarchisés par des flèches rouges.">
+            <button class="card__btn" aria-label="Agrandir : 1er décembre, lutte contre le VIH-SIDA">
+              <span class="card__media"><img src="assets/img/portfolio/vih-sida-sm.webp" alt="Affiche de sensibilisation du 1er décembre contre le VIH-SIDA" loading="lazy" width="600" height="706"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">04</span><h3>1er décembre</h3><p>Sensibilisation · Santé</p></div>
+          </article>
+          <article class="card" style="--ar: 0.681" data-index="4" data-title="Alloco Spice" data-cat="Restauration · Promotion" data-service="Design graphique" data-img="assets/img/portfolio/alloco-spice.webp"
+            data-brief="Annoncer une nouvelle saveur et une offre, et donner faim tout de suite." data-answer="Orange chaud, produit en gros plan, offre lisible en un coup d'œil (« + boisson offerte ») et prix géant : tout pousse à commander.">
+            <button class="card__btn" aria-label="Agrandir : Alloco Spice">
+              <span class="card__media"><img src="assets/img/portfolio/alloco-spice-sm.webp" alt="Affiche Alloco Spice : plat d'alloco épicé et boisson offerte" loading="lazy" width="545" height="800"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">05</span><h3>Alloco Spice</h3><p>Restauration · Promotion</p></div>
+          </article>
+          <article class="card" style="--ar: 0.85" data-index="5" data-title="Betsaleel" data-cat="Éditorial · Spirituel" data-service="Visuels pour réseaux sociaux" data-img="assets/img/portfolio/betsaleel.webp"
+            data-brief="Donner de la profondeur au sens d'un prénom biblique." data-answer="Lumière dorée, huile d'onction qui coule, typographie hébraïque et verset d'Exode 31 : une composition solennelle qui sert le texte.">
+            <button class="card__btn" aria-label="Agrandir : Betsaleel">
+              <span class="card__media"><img src="assets/img/portfolio/betsaleel-sm.webp" alt="Affiche Betsaleel : un homme reçoit l'onction d'huile, verset d'Exode 31" loading="lazy" width="600" height="706"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">06</span><h3>Betsaleel</h3><p>Éditorial · Spirituel</p></div>
+          </article>
+          <article class="card" style="--ar: 0.85" data-index="6" data-title="Octobre rose — #Vraishéros" data-cat="Sensibilisation · Santé" data-service="Communication de marque" data-img="assets/img/portfolio/octobre-rose.webp"
+            data-brief="Mobiliser les hommes pendant Octobre rose." data-answer="Les « vrais héros » ne sont pas à l'écran : la mise en scène oppose le film à la réalité d'une femme qui se bat. Rose et bleu pour parler aux deux publics.">
+            <button class="card__btn" aria-label="Agrandir : Octobre rose">
+              <span class="card__media"><img src="assets/img/portfolio/octobre-rose-sm.webp" alt="Affiche Octobre rose : une femme de dos devant un téléviseur" loading="lazy" width="600" height="706"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">07</span><h3>Octobre rose</h3><p>Sensibilisation · Santé</p></div>
+          </article>
+          <article class="card" style="--ar: 0.681" data-index="7" data-title="Travaux publics" data-cat="BTP · Corporate" data-service="Communication de marque" data-img="assets/img/portfolio/travaux-publics.webp"
+            data-brief="Inspirer confiance pour une entreprise de BTP." data-answer="Casque, grue, tours et ciel de chantier au coucher du soleil : une image de solidité, avec la liste des services et le contact en pied d'affiche.">
+            <button class="card__btn" aria-label="Agrandir : Travaux publics">
+              <span class="card__media"><img src="assets/img/portfolio/travaux-publics-sm.webp" alt="Affiche Travaux publics : ouvrier casqué devant des tours" loading="lazy" width="545" height="800"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">08</span><h3>Travaux publics</h3><p>BTP · Corporate</p></div>
+          </article>
+          <article class="card" style="--ar: 0.682" data-index="8" data-title="Accessoires de bureau" data-cat="Commerce · Soldes" data-service="Design graphique" data-img="assets/img/portfolio/accessoires-bureau.webp"
+            data-brief="Annoncer des soldes de novembre pour une boutique de fournitures." data-answer="Titre en 3D, bulle « SOLDE », bureau de manager en scène et liste produits : l'offre de -30 % est vue avant tout le reste.">
+            <button class="card__btn" aria-label="Agrandir : Accessoires de bureau">
+              <span class="card__media"><img src="assets/img/portfolio/accessoires-bureau-sm.webp" alt="Affiche soldes accessoires de bureau, -30 % en novembre" loading="lazy" width="546" height="800"></span>
+            </button>
+            <div class="card__meta"><span class="card__num">09</span><h3>Accessoires de bureau</h3><p>Commerce · Soldes</p></div>
+          </article>
+          <div class="card card--end">
+            <p class="eyebrow eyebrow--red">À vous</p>
+            <p class="card--end__title">La prochaine affiche, c'est la vôtre.</p>
+            <a href="#commande" class="btn btn--red" data-magnetic>Lancer mon projet ↗</a>
+          </div>
+        </div>
+        </div>
+        <div class="work__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ LE FONDATEUR ============ -->
+    <section class="section founder" id="fondateur">
+      <div class="founder__bg" aria-hidden="true">JEAN LEVI AKA</div>
+      <div class="wrap founder__grid">
+        <div class="founder__stage">
+          <div class="founder__canvas-wrap">
+            <canvas class="founder__canvas" aria-label="Avatar 3D de Jean Levi Aka qui change de posture"></canvas>
+            <div class="founder__pose" aria-live="polite"><span class="dot"></span> Posture : <b data-pose-label>Bras croisés</b></div>
+            <p class="founder__drag" aria-hidden="true">Glissez pour le faire pivoter</p>
+          </div>
+          <div class="founder__poses" role="group" aria-label="Choisir une posture">
+            <button data-pose="crossed" class="is-active">Bras croisés</button>
+            <button data-pose="hips">Mains sur les hanches</button>
+            <button data-pose="thinker">Réflexion</button>
+            <button data-pose="oneHip">Assurance</button>
+            <button data-pose="present">Présentation</button>
+          </div>
+        </div>
+
+        <div class="founder__content">
+          <p class="eyebrow eyebrow--red">Le fondateur</p>
+          <h2 class="founder__name" data-split>Jean Levi Aka</h2>
+          <p class="founder__role">Fondateur &amp; directeur artistique de REMP'ART</p>
+
+          <figure class="founder__photo" data-reveal>
+            <div class="founder__photo-frame">
+              <img src="assets/img/jean-levi-aka.webp" alt="Portrait de Jean Levi Aka en costume bleu marine" width="715" height="1071" loading="lazy">
+              <i class="h h--tl"></i><i class="h h--tr"></i><i class="h h--bl"></i><i class="h h--br"></i>
+            </div>
+            <figcaption><span>jean-levi-aka.jpg</span><span>100 % · calque verrouillé</span></figcaption>
+          </figure>
+
+          <p class="founder__intro" data-reveal>Designer graphique et directeur artistique, Jean Levi Aka a fondé REMP'ART avec une conviction simple : une belle image ne suffit pas, elle doit servir un message.</p>
+
+          <ol class="founder__chapters">
+            <li data-reveal>
+              <span>01</span>
+              <div><h3>L'œil</h3><p>Tout commence par l'écoute. Jean lit une marque comme on lit un visage : ce qu'elle dit, ce qu'elle tait, ce qu'elle pourrait devenir. Chaque projet démarre par trois questions : quel besoin, quel public, quel objectif.</p></div>
+            </li>
+            <li data-reveal>
+              <span>02</span>
+              <div><h3>Le métier</h3><p>Affiches publicitaires, campagnes de sensibilisation, identités visuelles, visuels pour les réseaux sociaux, montage vidéo : il passe d'un parfum de luxe à une campagne de santé publique avec la même exigence de clarté.</p></div>
+            </li>
+            <li data-reveal>
+              <span>03</span>
+              <div><h3>La signature</h3><p>Dans le coin de ses créations, trois lettres : <b>LAJ</b>. Une signature discrète, mais qui engage : un visuel ne quitte l'atelier que s'il mérite d'être signé.</p></div>
+            </li>
+            <li data-reveal>
+              <span>04</span>
+              <div><h3>La vision</h3><p>REMP'ART, c'est le rempart et l'art : bâtir, brique après brique, une communication visuelle solide pour les entrepreneurs, les marques et les associations qui veulent être vus et compris.</p></div>
+            </li>
+          </ol>
+
+          <blockquote class="founder__quote" data-reveal>
+            <p>« La créativité doit avoir un objectif. »</p>
+            <svg class="founder__sig" viewBox="0 0 140 100" aria-label="Signature LAJ">
+              <path d="M12 12 V88 H48" /><path d="M56 88 L76 12 L96 88 M63 62 H89" /><path d="M118 12 V72 Q118 92 100 88" />
+              <rect x="124" y="2" width="12" height="12" />
+            </svg>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMANDE ============ -->
+    <section class="section order" id="commande">
+      <div class="wrap order__grid">
+        <aside class="order__aside" data-reveal>
+          <p class="eyebrow">Parlons de votre projet</p>
+          <h2 class="h2" data-split>Passons de l'idée à la création.</h2>
+          <p>Remplissez les informations ci-dessous. Votre demande sera préparée dans WhatsApp afin que vous puissiez nous l'envoyer.</p>
+          <p class="order__note"><b>À noter :</b> le prix et le délai sont confirmés après échange. Ce formulaire ne constitue pas une commande payée.</p>
+          <a class="order__wa" href="https://wa.me/2250100511733" target="_blank" rel="noopener">
+            <span class="order__wa-icon" aria-hidden="true">✆</span>
+            <span><small>WhatsApp direct</small>+225 01 00 51 17 33</span>
+          </a>
+        </aside>
+        <form class="order__form" id="orderForm" data-reveal novalidate>
+          <div class="field">
+            <label for="name">Votre nom *</label>
+            <input id="name" name="name" required autocomplete="name" placeholder="Ex. Awa Koné">
+          </div>
+          <div class="field">
+            <label for="contact">Votre contact *</label>
+            <input id="contact" name="contact" required autocomplete="tel" placeholder="Téléphone ou e-mail">
+          </div>
+          <div class="field field--full">
+            <span class="label">Service souhaité *</span>
+            <div class="chips" role="radiogroup" aria-label="Service souhaité">
+              <label><input type="radio" name="service" value="Design graphique" required><span>Design graphique</span></label>
+              <label><input type="radio" name="service" value="Identité visuelle / logo"><span>Identité visuelle / logo</span></label>
+              <label><input type="radio" name="service" value="Visuels pour réseaux sociaux"><span>Réseaux sociaux</span></label>
+              <label><input type="radio" name="service" value="Vidéo et montage"><span>Vidéo &amp; montage</span></label>
+              <label><input type="radio" name="service" value="Communication de marque"><span>Communication de marque</span></label>
+              <label><input type="radio" name="service" value="Demande sur mesure"><span>Sur mesure</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="budget">Budget indicatif</label>
+            <select id="budget" name="budget">
+              <option>À discuter</option>
+              <option>Moins de 10 000 FCFA</option>
+              <option>10 000 à 25 000 FCFA</option>
+              <option>25 000 à 50 000 FCFA</option>
+              <option>Plus de 50 000 FCFA</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="deadline">Délai souhaité</label>
+            <select id="deadline" name="deadline">
+              <option>À discuter</option>
+              <option>Urgent (24–48 h)</option>
+              <option>Dans la semaine</option>
+              <option>Dans 2 semaines ou plus</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="details">Décrivez votre projet *</label>
+            <textarea id="details" name="details" required placeholder="Votre activité, le support souhaité, le message, vos couleurs…"></textarea>
+          </div>
+          <div class="field field--full order__submit">
+            <button class="btn btn--red" type="submit" data-magnetic>Préparer ma demande WhatsApp ↗</button>
+            <p class="order__msg" aria-live="polite">WhatsApp s'ouvrira avec votre message prêt à envoyer.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__cta">
+        <p class="eyebrow">Une idée à concrétiser ?</p>
+        <a class="footer__big" href="https://wa.me/2250100511733" target="_blank" rel="noopener" data-magnetic>Créons quelque chose de remarquable <span>↗</span></a>
+      </div>
+      <div class="footer__bottom">
+        <img src="assets/img/rempart-logo-white.png" alt="REMP'ART" width="130" height="45" loading="lazy">
+        <p>© <span data-year></span> REMP'ART — Studio de création digitale · Fondé par Jean Levi Aka</p>
+        <a href="#hero">Haut de page ↑</a>
+      </div>
+    </div>
+    <div class="footer__wordmark" aria-hidden="true">REMP'ART</div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/2250100511733" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp">✆</a>
+
+  <dialog class="lightbox" aria-label="Réalisation">
+    <div class="lightbox__inner">
+      <figure class="lightbox__media"><img alt=""></figure>
+      <div class="lightbox__info">
+        <p class="eyebrow eyebrow--red" data-lb="cat"></p>
+        <h3 data-lb="title"></h3>
+        <dl>
+          <dt>Le défi</dt><dd data-lb="brief"></dd>
+          <dt>La réponse créative</dt><dd data-lb="answer"></dd>
+        </dl>
+        <a class="btn btn--red" data-lb="order" href="#commande">Commander un visuel similaire ↗</a>
+        <div class="lightbox__nav">
+          <button data-lb-prev aria-label="Réalisation précédente">←</button>
+          <span data-lb="count"></span>
+          <button data-lb-next aria-label="Réalisation suivante">→</button>
+        </div>
+      </div>
+      <button class="lightbox__close" data-lb-close aria-label="Fermer">×</button>
+    </div>
+  </dialog>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
