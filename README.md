@@ -46,13 +46,11 @@ python3 -m http.server 8000
 
 (Un serveur est nécessaire : les modules JavaScript ne se chargent pas en ouvrant `index.html` directement.)
 
-## Mettre le site en ligne (GitHub Pages)
+## Mettre le site en ligne (GitHub Pages, gratuit)
 
-Le workflow `.github/workflows/pages.yml` publie le site à chaque push sur `main`.
-Il suffit, une fois, d'aller dans **Settings → Pages** du dépôt et de choisir **Source : GitHub Actions**.
-L'adresse sera alors `https://<votre-compte>.github.io/jean-levi-aka/`.
-
-> GitHub Pages sur un dépôt **privé** demande un abonnement GitHub Pro (ou Team/Enterprise). Avec un compte gratuit, il faut rendre le dépôt public pour activer Pages, ou héberger ailleurs (Netlify, Vercel, Hostinger…) en déposant simplement le dossier.
+Le dépôt doit être **public**. Dans le dépôt : **Settings → Pages → Build and deployment → Source : Deploy from a branch → Branch : `main`, dossier `/ (root)` → Save**.
+Après une ou deux minutes, le site est en ligne à `https://<compte>.github.io/<nom-du-dépôt>/`.
+Chaque modification envoyée sur `main` est publiée automatiquement.
 
 ## Ajouter une réalisation
 
