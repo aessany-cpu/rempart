@@ -34,6 +34,7 @@ assets/img/                affiches (WebP), photo, logo
 assets/vendor/             Three.js, GSAP, Lenis (copiés localement, aucun CDN nécessaire)
 dev/poses.html             planche de test des postures (non liée au site)
 sfx/                       sonothèque d'effets sonores pour le motion design (voir sfx/README.md)
+studio/                    studio de montage motion design REMP'ART Motion (voir studio/README.md)
 ```
 
 Aucune compilation n'est nécessaire : ce sont des fichiers statiques.
