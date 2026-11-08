@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "categories": {
+    "whoosh": {
+      "label": "Whooshs / Swooshs",
+      "description": "Passages d'air rapides : apparition, sortie ou mouvement d'un élément à l'écran."
+    },
+    "impact": {
+      "label": "Impacts / Booms",
+      "description": "Coups graves et percutants : révélation d'un titre, chute d'un logo, temps fort."
+    },
+    "riser": {
+      "label": "Montées (risers)",
+      "description": "Sons qui montent en tension avant un temps fort ; on les termine sur l'image de l'impact."
+    },
+    "transition": {
+      "label": "Transitions",
+      "description": "Sons courts qui marquent un changement de scène ou de plan."
+    },
+    "glitch": {
+      "label": "Glitchs / Saccades",
+      "description": "Bruits numériques hachés : distorsion, texte qui se brouille, effet écran."
+    },
+    "ui-clic": {
+      "label": "Clics / Interface",
+      "description": "Clics, pops, bips : apparition d'icônes, boutons, curseur, petits éléments."
+    },
+    "tension": {
+      "label": "Tension / Pulsations",
+      "description": "Pulsations, tic-tac, battements : suspense, compte à rebours, attente."
+    },
+    "texte": {
+      "label": "Texte / Écriture",
+      "description": "Frappe clavier, écriture, apparition de lettres."
+    },
+    "ambiance": {
+      "label": "Ambiances / Nappes",
+      "description": "Fonds sonores continus : drones, atmosphères, textures."
+    },
+    "musique": {
+      "label": "Musique / Boucles",
+      "description": "Extraits musicaux et boucles utilisables en fond."
+    },
+    "foley": {
+      "label": "Bruitages réels",
+      "description": "Sons d'objets réels : papier, porte, pas, verre, appareil photo..."
+    }
+  },
+  "sources": [
+    {
+      "id": "src-001",
+      "file": "sources/src-001_compilation-sfx-motion-design-01.m4a",
+      "title": "Compilation SFX motion design 01",
+      "origin": "Envoyé par l'utilisateur le 2026-11-08 (vidéo « Comment SFX and I'll send it to you », 15,5 s)",
+      "license": "inconnue — à vérifier avant usage commercial",
+      "added": "2026-11-08",
+      "duration": 15.536
+    }
+  ],
+  "sounds": [
+    {
+      "id": "glitch-saccade-01",
+      "name": "Saccade numérique rapide",
+      "category": "glitch",
+      "tags": [
+        "glitch",
+        "saccade",
+        "stutter",
+        "numerique",
+        "rafale"
+      ],
+      "description": "Rafale d'une dizaine d'attaques aiguës très rapides (≈14 par seconde).",
+      "usage": "Texte qui se brouille, effet écran/glitch, défilement rapide, apparition lettre par lettre.",
+      "files": {
+        "wav": "library/glitch/glitch-saccade-01.wav",
+        "mp3": "library/glitch/glitch-saccade-01.mp3"
+      },
+      "duration": 0.85,
+      "hit_point": 0.01,
+      "source": {
+        "id": "src-001",
+        "start": 9.45,
+        "end": 10.3
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "impact-boom-01",
+      "name": "Boom grave avec traîne",
+      "category": "impact",
+      "tags": [
+        "grave",
+        "boom",
+        "cinematique",
+        "revelation",
+        "traine"
+      ],
+      "description": "Gros impact grave et large, avec une traîne qui s'éteint sur environ 2,5 s.",
+      "usage": "Révélation d'un titre, d'un logo ou d'un chiffre clé ; caler l'impact sur l'image d'arrivée.",
+      "files": {
+        "wav": "library/impact/impact-boom-01.wav",
+        "mp3": "library/impact/impact-boom-01.mp3"
+      },
+      "duration": 2.68,
+      "hit_point": 0.07,
+      "source": {
+        "id": "src-001",
+        "start": 0.47,
+        "end": 3.15
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "melodie-fond-01",
+      "name": "Fond mélodique (≈3 s)",
+      "category": "musique",
+      "tags": [
+        "musique",
+        "melodie",
+        "fond",
+        "boucle"
+      ],
+      "description": "Extrait de la mélodie de fond qui accompagne la fin de la compilation.",
+      "usage": "Fond musical court sous un plan de fin ; peut être bouclé.",
+      "files": {
+        "wav": "library/musique/melodie-fond-01.wav",
+        "mp3": "library/musique/melodie-fond-01.mp3"
+      },
+      "duration": 3.236,
+      "hit_point": 0.62,
+      "source": {
+        "id": "src-001",
+        "start": 12.3,
+        "end": 15.54
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "riser-montee-01",
+      "name": "Montée de tension (≈2 s)",
+      "category": "riser",
+      "tags": [
+        "montee",
+        "tension",
+        "build-up",
+        "souffle"
+      ],
+      "description": "Bruit qui monte progressivement du grave vers l'aigu pendant environ 2 secondes.",
+      "usage": "Avant un temps fort : placer la fin du son sur l'image de l'impact ou de la transition.",
+      "files": {
+        "wav": "library/riser/riser-montee-01.wav",
+        "mp3": "library/riser/riser-montee-01.mp3"
+      },
+      "duration": 2.14,
+      "hit_point": 2.14,
+      "source": {
+        "id": "src-001",
+        "start": 3.15,
+        "end": 5.29
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "pulsation-suspense-01",
+      "name": "Pulsation de suspense",
+      "category": "tension",
+      "tags": [
+        "pulsation",
+        "tic-tac",
+        "suspense",
+        "attente",
+        "calme",
+        "boucle"
+      ],
+      "description": "Pulsations graves régulières (≈4 par seconde), discrètes, avec un double clic vers 1,5 s.",
+      "usage": "Attente, compte à rebours, moment calme avant une révélation.",
+      "files": {
+        "wav": "library/tension/pulsation-suspense-01.wav",
+        "mp3": "library/tension/pulsation-suspense-01.mp3"
+      },
+      "duration": 2.67,
+      "hit_point": 1.57,
+      "source": {
+        "id": "src-001",
+        "start": 5.75,
+        "end": 8.42
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "bips-montee-numerique-01",
+      "name": "Bips + balayage numérique montant",
+      "category": "transition",
+      "tags": [
+        "court",
+        "numerique",
+        "bip",
+        "balayage",
+        "intro"
+      ],
+      "description": "Petits bips aigus suivis d'un balayage électronique qui monte, juste avant un impact.",
+      "usage": "Juste avant l'apparition d'un logo ou d'un titre ; enchaîner avec impact-boom-01.",
+      "files": {
+        "wav": "library/transition/bips-montee-numerique-01.wav",
+        "mp3": "library/transition/bips-montee-numerique-01.mp3"
+      },
+      "duration": 0.49,
+      "hit_point": 0.045,
+      "source": {
+        "id": "src-001",
+        "start": 0.0,
+        "end": 0.49
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "clic-double-01",
+      "name": "Double clic sec",
+      "category": "ui-clic",
+      "tags": [
+        "clic",
+        "double",
+        "sec",
+        "interface",
+        "declencheur"
+      ],
+      "description": "Deux clics secs et aigus très rapprochés (≈0,1 s d'écart).",
+      "usage": "Clic de souris, déclenchement d'un bouton, prise de photo stylisée, apparition d'une icône.",
+      "files": {
+        "wav": "library/ui-clic/clic-double-01.wav",
+        "mp3": "library/ui-clic/clic-double-01.mp3"
+      },
+      "duration": 0.22,
+      "hit_point": 0.13,
+      "source": {
+        "id": "src-001",
+        "start": 7.28,
+        "end": 7.5
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "pop-01",
+      "name": "Pop / clic léger",
+      "category": "ui-clic",
+      "tags": [
+        "pop",
+        "clic",
+        "leger",
+        "apparition"
+      ],
+      "description": "Petit pop bref et brillant.",
+      "usage": "Apparition d'une icône, d'une bulle, d'un point de liste.",
+      "files": {
+        "wav": "library/ui-clic/pop-01.wav",
+        "mp3": "library/ui-clic/pop-01.mp3"
+      },
+      "duration": 0.22,
+      "hit_point": 0.06,
+      "source": {
+        "id": "src-001",
+        "start": 11.42,
+        "end": 11.64
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "pop-02",
+      "name": "Pop / clic léger (variante)",
+      "category": "ui-clic",
+      "tags": [
+        "pop",
+        "clic",
+        "leger",
+        "apparition",
+        "variante"
+      ],
+      "description": "Variante plus courte de pop-01.",
+      "usage": "À alterner avec pop-01 quand plusieurs éléments apparaissent à la suite.",
+      "files": {
+        "wav": "library/ui-clic/pop-02.wav",
+        "mp3": "library/ui-clic/pop-02.mp3"
+      },
+      "duration": 0.17,
+      "hit_point": 0.04,
+      "source": {
+        "id": "src-001",
+        "start": 11.97,
+        "end": 12.14
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    },
+    {
+      "id": "whoosh-souffle-01",
+      "name": "Whoosh court brillant",
+      "category": "whoosh",
+      "tags": [
+        "court",
+        "air",
+        "aigu",
+        "passage"
+      ],
+      "description": "Passage d'air bref et brillant, avec quelques petites attaques.",
+      "usage": "Entrée ou sortie rapide d'un élément, glissement de texte, changement de plan.",
+      "files": {
+        "wav": "library/whoosh/whoosh-souffle-01.wav",
+        "mp3": "library/whoosh/whoosh-souffle-01.mp3"
+      },
+      "duration": 0.46,
+      "hit_point": 0.17,
+      "source": {
+        "id": "src-001",
+        "start": 5.29,
+        "end": 5.75
+      },
+      "clean": false,
+      "verified": false,
+      "added": "2026-11-08"
+    }
+  ]
+}

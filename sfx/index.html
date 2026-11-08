@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonothèque motion design</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1a1a1a; --muted: #6b6b6b; --line: #e3e1dc;
+    --accent: #c8102e; --chip: #efede8; --warn: #a15c00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121212; --card: #1c1c1c; --ink: #f1f1f1; --muted: #a0a0a0; --line: #2c2c2c;
+            --accent: #ff4d63; --chip: #262626; --warn: #f0a640; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  input[type=search] { flex: 1 1 240px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line);
+                       background: var(--card); color: var(--ink); font: inherit; }
+  button.cat { border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 12px;
+               border-radius: 999px; cursor: pointer; font: inherit; font-size: 13px; }
+  button.cat[aria-pressed=true] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 28px 0 10px; }
+  .grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .top { display: flex; align-items: center; gap: 10px; }
+  .play { width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--accent); color: #fff;
+          cursor: pointer; flex: none; font-size: 15px; }
+  .name { font-weight: 600; }
+  .id { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); cursor: pointer; }
+  .meta { color: var(--muted); font-size: 13px; margin: 8px 0 4px; }
+  .desc { font-size: 14px; margin: 4px 0; }
+  .usage { font-size: 13px; color: var(--muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .tag { background: var(--chip); border-radius: 4px; padding: 1px 6px; font-size: 12px; }
+  .warn { color: var(--warn); font-size: 12px; }
+  .prog { height: 3px; background: var(--line); border-radius: 2px; margin-top: 10px; overflow: hidden; position: relative; }
+  .prog i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--accent); }
+  .prog b { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--ink); }
+  .empty { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sonothèque motion design</h1>
+  <p class="sub" id="sub">Chargement…</p>
+  <div class="bar">
+    <input type="search" id="q" placeholder="Chercher : impact, clic, montée, glitch…" aria-label="Chercher un son">
+  </div>
+  <div class="bar" id="cats"></div>
+  <div id="list"></div>
+</main>
+<script>
+(async () => {
+  const cat = await fetch("catalog.json").then(r => r.json());
+  const $ = s => document.querySelector(s);
+  let current = null, filter = "";
+  const audio = new Audio();
+  $("#sub").textContent = `${cat.sounds.length} sons · mis à jour le ${cat.updated} · la barre verticale indique le point d'impact (à caler sur l'image). Cliquez sur un identifiant pour le copier.`;
+
+  const used = Object.keys(cat.categories).filter(k => cat.sounds.some(s => s.category === k));
+  for (const k of ["", ...used]) {
+    const b = document.createElement("button");
+    b.className = "cat"; b.textContent = k ? cat.categories[k].label : "Tout";
+    b.setAttribute("aria-pressed", k === filter);
+    b.onclick = () => { filter = k; document.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); };
+    $("#cats").append(b);
+  }
+  $("#q").oninput = render;
+
+  function render() {
+    const q = $("#q").value.trim().toLowerCase();
+    const list = $("#list"); list.innerHTML = "";
+    let n = 0;
+    for (const k of used) {
+      if (filter && filter !== k) continue;
+      const sounds = cat.sounds.filter(s => s.category === k &&
+        [s.id, s.name, s.description, s.usage, ...s.tags].join(" ").toLowerCase().includes(q));
+      if (!sounds.length) continue;
+      const h = document.createElement("h2"); h.textContent = cat.categories[k].label; list.append(h);
+      const g = document.createElement("div"); g.className = "grid"; list.append(g);
+      for (const s of sounds) { g.append(card(s)); n++; }
+    }
+    if (!n) list.innerHTML = '<p class="empty">Aucun son ne correspond.</p>';
+  }
+
+  function card(s) {
+    const el = document.createElement("div"); el.className = "card";
+    const hp = s.hit_point == null ? null : Math.min(100, s.hit_point / s.duration * 100);
+    el.innerHTML = `
+      <div class="top"><button class="play" aria-label="Écouter">▶</button>
+        <div><div class="name"></div><div class="id" title="Copier l'identifiant"></div></div></div>
+      <div class="meta">${s.duration.toFixed(2)} s${s.hit_point != null ? ` · impact à ${s.hit_point.toFixed(2)} s` : ""}
+        ${s.verified ? "" : ' · <span class="warn">étiquette à valider</span>'}</div>
+      <div class="desc"></div><div class="usage"></div>
+      <div class="tags">${s.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+      <div class="prog"><i></i>${hp == null ? "" : `<b style="left:${hp}%"></b>`}</div>`;
+    el.querySelector(".name").textContent = s.name;
+    el.querySelector(".id").textContent = s.id;
+    el.querySelector(".desc").textContent = s.description;
+    el.querySelector(".usage").textContent = s.usage ? "Usage : " + s.usage : "";
+    el.querySelector(".id").onclick = () => navigator.clipboard && navigator.clipboard.writeText(s.id);
+    const btn = el.querySelector(".play"), bar = el.querySelector(".prog i");
+    btn.onclick = () => {
+      if (current === el && !audio.paused) { audio.pause(); return; }
+      audio.src = s.files.mp3; audio.currentTime = 0; audio.play();
+      document.querySelectorAll(".play").forEach(b => b.textContent = "▶");
+      document.querySelectorAll(".prog i").forEach(b => b.style.width = 0);
+      current = el;
+      audio.ontimeupdate = () => bar.style.width = (audio.currentTime / audio.duration * 100) + "%";
+      audio.onplay = () => btn.textContent = "❚❚";
+      audio.onpause = audio.onended = () => btn.textContent = "▶";
+    };
+    return el;
+  }
+  render();
+})().catch(e => { document.querySelector("#sub").textContent = "Impossible de lire catalog.json (ouvrez la page via un serveur : python3 -m http.server)."; });
+</script>
+</body>
+</html>
